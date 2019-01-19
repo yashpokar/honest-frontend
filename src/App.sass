@@ -12,12 +12,29 @@
 .fullheight
 	height: 100vh
 
+.error
+	padding: 10px
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	background-color: #e74c3c
+	border-color: #c0392b
+	color: #fafafa
+	display: none
+
+	&.show
+		display: block
+
 .flex
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
 	display: -o-flex
 	display: flex
+
+.as-column
+	flex-direction: column
 
 .center
 	justify-content: center
@@ -26,19 +43,20 @@
 	align-items: center
 
 .card
-	border: 1px solid #eee
-	box-shadow: 0 2px 6px rgba(0, 0, 0, .1)
+	border: 1px solid #2c3e50
+	box-shadow: 0 2px 6px rgba(44, 62, 80, .25)
+	border-radius: 3px
 
 	&__title,
 	&__body
 		padding: 1.6rem
 
 	&__title
-		color: #333
+		color: #fafafa
 		font-size: 1.5rem
 		font-weight: 900
 		border-bottom: 1px solid #eee
-		background-color: #ecf0f1
+		background-color: #2c3e50
 
 	&__body
 
@@ -52,18 +70,25 @@
 		outline: none
 
 .input-box
-	border: 1px solid #eee
+	border: 1px solid #2c3e50
 
 	&::-webkit-input-placeholder
 		color: #999
 
 .button
-	background-color: #e67e22
+	background-color: #34495e
 	color: #fff
-	border: 1px solid #d35400
+	border: 1px solid #2c3e50
 	margin-top: 20px
 	cursor: pointer
+	font-weight: 700
+	text-transform: uppercase
 
 	&:hover
 		background-color: #fafafa
-		color: #e67e22
+		color: #2c3e50
+
+	&:disabled
+		background-color: #eee
+		border-color: #ddd
+		color: #888
