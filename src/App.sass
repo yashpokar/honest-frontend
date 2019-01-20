@@ -2,7 +2,7 @@
 	box-sizing: border-box
 	padding: 0
 	margin: 0
-	font: normal 100% "Roboto", sans-serif
+	font: normal 1rem "Roboto", sans-serif
 	color: #666
 	background-color: #fafafa
 
@@ -13,7 +13,8 @@
 	height: 100vh
 
 .error
-	padding: 10px
+	cursor: pointer
+	padding: 1rem
 	position: fixed
 	top: 0
 	right: 0
@@ -46,6 +47,7 @@
 	border: 1px solid #2c3e50
 	box-shadow: 0 2px 6px rgba(44, 62, 80, .25)
 	border-radius: 3px
+	position: relative
 
 	&__title,
 	&__body
@@ -59,6 +61,39 @@
 		background-color: #2c3e50
 
 	&__body
+
+	&__override
+		background-color: #2c3e50
+		color: #fafafa
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 0 1rem
+		display: none
+
+		&.is-active
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+
+		&-content
+			padding: 1rem
+			border-radius: 3px
+			cursor: pointer
+
+		&-close
+			position: absolute
+			top: 10px
+			right: 10px
+			font-size: 1.2rem
+			cursor: pointer
+			padding: 5px 10px
+			background-color: #eee
+			border-radius: 50%
 
 .input-box,
 .button
